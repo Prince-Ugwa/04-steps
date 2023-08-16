@@ -84,14 +84,22 @@ h3 {
 }
 
 .close {
-  position: absolute;
+  /* position: absolute; */
   top: 16px;
-  right: 16px;
+  right: 160px;
   border: none;
   background: none;
   cursor: pointer;
   font-size: 40px;
   color: inherit;
+}
+.btn {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  margin-top: 12px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .close:hover {

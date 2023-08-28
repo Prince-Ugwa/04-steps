@@ -10,7 +10,6 @@ export default function App() {
   return (
     <div>
       <Steps />
-      <Steps />
     </div>
   );
 }
@@ -19,7 +18,6 @@ function Steps() {
   const [step, setStep] = useState(1);
   // const [test, setTest] = useState({ name: "fred" });
   const [isOpen, setIsOpen] = useState(true);
-  const [openMsg, setOpenMsg] = useState(false);
 
   const handlePrevious = function () {
     // this method of updating state is fine but but it is more efficient to
@@ -64,24 +62,6 @@ function Steps() {
               onClick={handleNext}
             >
               next
-            </button>
-          </div>
-          <div>
-            {openMsg && (
-              <div>
-                <p className="test-msg hidden">
-                  I'm a frontend developer and a critical designer with seven
-                  years of experience and more generic guy in terms of
-                  everything I can cook, i can sing, i don not know handleNextto{" "}
-                </p>
-              </div>
-            )}
-            <button
-              className="btn"
-              style={{ backgroundColor: "#7950f2", color: "#f5f5f5" }}
-              onClick={() => setOpenMsg((is) => !is)}
-            >
-              Show msg
             </button>
           </div>
         </div>

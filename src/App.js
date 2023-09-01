@@ -34,7 +34,7 @@ function Steps() {
   };
   return (
     <div>
-      <button className="close" onClick={() => setIsOpen((is) => !is)}>
+      <button className="close" onClick={() => setIsOpen((open) => !open)}>
         &times;
       </button>
       {isOpen && (
@@ -49,6 +49,7 @@ function Steps() {
             {/*test.name*/}
           </p>
           <div className="buttons">
+            {/*
             <button
               className="previous"
               style={{ backgroundColor: "#7950f2", color: "#f5f5f5" }}
@@ -62,10 +63,36 @@ function Steps() {
               onClick={handleNext}
             >
               next
-            </button>
+      </button>*/}
+            <Button
+              bgColor="#7950f2"
+              color="#f5f5f5"
+              text="previous"
+              onClick={handlePrevious}
+            >
+              {" "}
+              <span>⬅</span>Previous
+            </Button>
+            <Button
+              bgColor="#7950f2"
+              color="#f5f5f5"
+              text="next"
+              onClick={handleNext}
+            >
+              {" "}
+              Next <span>➡</span>
+            </Button>
           </div>
         </div>
       )}
     </div>
+  );
+}
+
+function Button({ bgColor, color, text, onClick, children }) {
+  return (
+    <button style={{ background: bgColor, color: color }} onClick={onClick}>
+      {children}
+    </button>
   );
 }
